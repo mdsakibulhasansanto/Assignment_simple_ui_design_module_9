@@ -8,11 +8,11 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
 
     return Scaffold (
-
+      backgroundColor: Colors.white,
       //AppBar
       appBar: AppBar(
         backgroundColor: Colors.amber,
-        elevation: 1,
+        //elevation: 0,
 
         title: const Text('My Profile',style: TextStyle(
           color: Colors.black,
@@ -38,13 +38,14 @@ class HomePage extends StatelessWidget {
       //Body
       body: const Center(
         child: Column(
-          children: [
 
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: [
             // First image
             SizedBox(height: 10,),
             CircleAvatar(
               radius: 70,
-              child: Icon(Icons.icecream_outlined,size: 80,),
+              child: Icon(Icons.icecream_outlined,size: 85,),
             ),
             SizedBox(height: 5,),
             Text('Ice cream is very delicious right ?',style: TextStyle(
@@ -58,7 +59,7 @@ class HomePage extends StatelessWidget {
             SizedBox(height: 30,),
             CircleAvatar(
               radius: 70,
-              child: Icon(Icons.code,size: 80,),
+              child: Icon(Icons.code,size: 85,),
             ),
             SizedBox(height: 10,),
             Text('Programing is not boring if you love it ',style: TextStyle(
@@ -72,9 +73,28 @@ class HomePage extends StatelessWidget {
             SizedBox(height: 30,),
             CircleAvatar(
               radius: 70,
-              child: Icon(Icons.egg_outlined,size: 80,),
+              child: Icon(Icons.egg_outlined,size: 85,),
             ),
-            SizedBox(height: 20,),
+            SizedBox(height: 30,),
+
+            Row(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                Padding(
+                  padding: EdgeInsets.all(8.0),
+                  child: Text(
+                    maxLines: 2,
+                    'If you submit code directly copy from chatgpt\n then mark will 0',
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 15,
+                      fontWeight: FontWeight.bold
+                    ),
+
+                  ),
+                )
+              ],
+            )
           ],
         ),
       ),
