@@ -61,7 +61,7 @@ class HomePage extends StatelessWidget {
               radius: 70,
               child: Icon(Icons.code,size: 85,),
             ),
-            SizedBox(height: 10,),
+            SizedBox(height: 5,),
             Text('Programing is not boring if you love it ',style: TextStyle(
               color: Colors.black,
               fontSize: 15,
